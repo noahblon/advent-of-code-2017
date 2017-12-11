@@ -26,7 +26,7 @@ function run(input) {
     input = parseInput(input);
     let k = input.length;    
     input.forEach(item => {
-        for(let i = 0; i < item.length; i++) {
+        for (let i = 0; i < item.length; i++) {
             const part = item[i];
             const filteredInput = item.filter(k => k === part);
             if (filteredInput.length > 1) {
@@ -36,34 +36,6 @@ function run(input) {
         }        
     });
     return k;
-    // input.forEach(item => {
-    //     const filteredInput = input.filter(k => k === item);
-    //     if(filteredInput.length === 1) {
-    //         i++;
-    //     }
-    // });
-    // return i;
 }
 
-console.log(run(input));
-// console.log(`The answer is: ${run(parse(input))}`);
-
-// const tests = [
-//     {
-//         input: 'aa bb cc dd ee',
-//         output: true
-//     },
-//     {
-//         input: 'aa bb cc dd aa',
-//         output: false
-//     },
-//     {
-//         input: 'aa bb cc dd aaa',
-//         output: true
-//     }
-// ];
-
-// tests.forEach(test => {
-//     const answer = run(test.input);
-//     assert.strictEqual(answer, test.output);
-// });
+console.log(`The answer is: ${run(input)}`);
